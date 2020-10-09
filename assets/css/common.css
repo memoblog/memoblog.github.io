@@ -1,0 +1,111 @@
+@import "./header.css";
+@import "./footer.css";
+@font-face {
+    font-family: 'NunitoBold';
+    src: url('../fonts/Nunito-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'NunitoExtraBold';
+    src: url('../fonts/Nunito-ExtraBold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'NunitoSemiBold';
+    src: url('../fonts/Nunito-SemiBold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Sriracha';
+    src: url('../fonts/Sriracha-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+input:focus,
+button:focus {
+    outline: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #ECECEC;
+    font-size: 1.5rem;
+    font-family: "NunitoSemiBold";
+}
+
+.show {
+    display: block !important;
+}
+
+.hide {
+    display: none !important;
+}
+
+.show-flex {
+    display: flex !important;
+}
+
+.notification {
+    font-family: NunitoBold;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 36px;
+}
+
+/* Remove arrow in number input */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield !important;
+}
+
+section.body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 35px 0;
+}
+
+section.body div.body {
+    width: 1265px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+section.body div.body div.main {
+    background-color: white;
+    border-radius: 10px;
+    line-height: 19px;
+    flex-grow: 1;
+    min-width: 411px;
+}
+
+section.body div.body div.sub {
+    background-color: white;
+    padding: 29px 32px 30px 29px;
+    border-radius: 10px;
+    font-family: "NunitoSemiBold";
+    font-size: 1.4em;
+    max-width: 300px;
+}

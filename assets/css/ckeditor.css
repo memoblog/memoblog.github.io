@@ -1,0 +1,107 @@
+@import "./common.css";
+
+section.body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 35px 0;
+}
+
+section.body div.body {
+    width: 1265px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+section.body div.body div.main {
+    background-color: white;
+    border-radius: 10px;
+    line-height: 19px;
+    flex-grow: 1;
+    width: 411px;
+    padding: 40px 20px
+}
+
+form.editor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+form.editor div.editor {
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #d2d2d2;
+    margin-bottom: 12px;
+    width: 90%;
+}
+
+#editor {
+    background-color: white;
+}
+
+#submit {
+    display: none;
+}
+
+form.editor label.submit {
+    cursor: pointer;
+    padding: 7px 10px;
+    border: 2px solid green;
+    border-radius: 5px;
+}
+
+form.editor label.submit:hover {
+    color: white;
+    background-color: green;
+}
+
+[type="text"] {
+    padding: 5px 10px;
+    border: 2px solid grey;
+    border-radius: 5px;
+    font-family: NunitoSemiBold;
+}
+
+[type="file"] {
+    display: none;
+}
+
+[type="file"] + label {
+    background: #76B0DA;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    display: block;
+    outline: none;
+    padding: 10px 20px;
+    position: relative;
+    transition: all 0.3s;
+
+    max-width: 180px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+[type="file"] + label:hover {
+    background-color: #3e9bdd;
+}
+
+
+@media (max-width: 492px) {
+    section.body div.body {
+        width: 100%;
+    }
+    section.body div.body div.main {
+        min-width: unset;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

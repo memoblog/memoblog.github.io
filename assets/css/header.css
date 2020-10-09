@@ -1,0 +1,46 @@
+header {
+    width: 100%;
+    height: 190px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/header-background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+div.header {
+    height: 100%;
+}
+
+div.header>nav {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1265px;
+    flex-grow: 1;
+    height: 100%;
+}
+
+div.header>nav a {
+    height: 100%;
+}
+
+div.header>nav a .logo {
+    box-sizing: border-box;
+    padding: 10px 0;
+    height: 100%;
+}
+
+.whiteLogo {
+    display: none;
+}
+
+@media (max-width: 410px) {
+    div.header>nav a .logo {
+        padding: 25px 0;
+    }
+}

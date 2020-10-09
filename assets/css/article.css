@@ -1,0 +1,24 @@
+@import "./common.css";
+
+section.body div.body div.main {
+    padding: 30px 30px 50px;
+}
+
+section.body div.body div.main div.article-title {
+    font-size: 2.4em;
+    line-height: 36px;
+    font-family: "NunitoExtraBold";
+    margin-top: 12px;
+    margin-bottom: 10px;
+}
+
+section.body div.body div.main div.article-date {
+    font-family: "NunitoExtraBold";
+    margin-bottom: 12px;
+}
+
+section.body div.body div.main div.article-content {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+}
