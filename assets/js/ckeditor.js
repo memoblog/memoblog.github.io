@@ -59,7 +59,8 @@ function makeFileName(title) {
 function saveFile(headers, filename, text) {
     $.ajax({
         type: "PUT",
-        url: `https://api.github.com/repos/${CONSTANT.USER}/${CONSTANT.REPO}/contents/${CONSTANT.FOLDER}/${CONSTANT.ARTICLES_PATH}/${filename}.html`,
+        // url: `https://api.github.com/repos/${CONSTANT.USER}/${CONSTANT.REPO}/contents/${CONSTANT.FOLDER}/${CONSTANT.ARTICLES_PATH}/${filename}.html`,
+        url: `https://api.github.com/repos/${CONSTANT.USER}/${CONSTANT.REPO}/contents/${CONSTANT.ARTICLES_PATH}/${filename}.html`,
         data: JSON.stringify({
             "message": `Push article ${filename}`,
             "content":  btoa(unescape(encodeURIComponent(text)))
@@ -114,7 +115,8 @@ DecoupledEditor
                 fr.onload = () => {
                     $.ajax({
                         type: "PUT",
-                        url: `https://api.github.com/repos/${CONSTANT.USER}/${CONSTANT.REPO}/contents/${CONSTANT.FOLDER}/${CONSTANT.IMAGES_PATH}/${filename}.${extension}`,
+                        // url: `https://api.github.com/repos/${CONSTANT.USER}/${CONSTANT.REPO}/contents/${CONSTANT.FOLDER}/${CONSTANT.IMAGES_PATH}/${filename}.${extension}`,
+                        url: `https://api.github.com/repos/${CONSTANT.USER}/${CONSTANT.REPO}/contents/${CONSTANT.IMAGES_PATH}/${filename}.${extension}`,
                         data: JSON.stringify({
                             "message": `Push image ${filename}.${extension}`,
                             "content":  fr.result.split(',').slice(-1)[0]

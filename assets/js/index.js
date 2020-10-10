@@ -109,7 +109,7 @@ function genArticles() {
                 articles += `
                     <div class="article">
                         <a href='article.html?article=${article.path}'>
-                            <img src="https://${CONSTANT.REPO}/${CONSTANT.FOLDER}/${CONSTANT.IMAGES_PATH}/${image[0]}" alt="article-image"/>
+                            <img src="https://${CONSTANT.REPO}/${CONSTANT.IMAGES_PATH}/${image[0]}" alt="article-image"/>
                         </a>
                         <div class="info">
                             <a href='article.html?article=${article.path}'>${title}</a>
@@ -122,7 +122,7 @@ function genArticles() {
                 articles += `
                     <div class="article">
                         <a href='article.html?article=${article.path}'>
-                            <img src="https://${CONSTANT.REPO}/${CONSTANT.FOLDER}/${CONSTANT.IMAGES_PATH}/default.png" alt="article-image"/>
+                            <img src="https://${CONSTANT.REPO}/${CONSTANT.IMAGES_PATH}/default.png" alt="article-image"/>
                         </a>
                         <div class="info">
                             <a href='article.html?article=${article.path}'>${title}</a>
@@ -158,7 +158,7 @@ function init() {
             // Authorization: `Basic ${token}`
             Authorization: `token ${CONSTANT.READONLY}`
         },
-        url: `https://api.github.com/repos/${CONSTANT.USER}/${CONSTANT.REPO}/git/trees/${CONSTANT.BRANCH}:${CONSTANT.FOLDER}/${CONSTANT.IMAGES_PATH}`,
+        url: `https://api.github.com/repos/${CONSTANT.USER}/${CONSTANT.REPO}/git/trees/${CONSTANT.BRANCH}:${CONSTANT.IMAGES_PATH}`,
         success: function (response) {
             for (let image of response.tree) {
                 images.push(image.path);
@@ -170,7 +170,7 @@ function init() {
                     // Authorization: `Basic ${token}`
                     Authorization: `token ${CONSTANT.READONLY}`
                 },
-                url: `https://api.github.com/repos/${CONSTANT.USER}/${CONSTANT.REPO}/git/trees/${CONSTANT.BRANCH}:${CONSTANT.FOLDER}/${CONSTANT.ARTICLES_PATH}`,
+                url: `https://api.github.com/repos/${CONSTANT.USER}/${CONSTANT.REPO}/git/trees/${CONSTANT.BRANCH}:${CONSTANT.ARTICLES_PATH}`,
                 success: function (response) {
                     tree = response.tree.filter(file => file.path != ".gitkeep");
                     tree = UTILS.sortByDate(tree);

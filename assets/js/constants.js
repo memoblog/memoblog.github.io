@@ -3,7 +3,7 @@ let CONSTANT = {
     
     USER: 'memoblog',
     REPO: 'memoblog.github.io',
-    BRANCH: 'master',
+    BRANCH: 'main',
     FOLDER: '.',
     ARTICLES_PATH: 'articles',
     IMAGES_PATH: 'assets/images'
