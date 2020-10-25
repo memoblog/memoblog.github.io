@@ -24,6 +24,10 @@ section.body div.body div.main div.article-content {
 }
 
 @media (max-width: 884px) {
+    section.body div.body {
+        padding: 0;
+    }
+
     section.body div.body div.sub {
         display: none;
     }
