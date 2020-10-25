@@ -22,3 +22,9 @@ section.body div.body div.main div.article-content {
     flex-direction: column;
     text-align: justify;
 }
+
+@media (max-width: 884px) {
+    section.body div.body div.sub {
+        display: none;
+    }
+}
