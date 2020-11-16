@@ -104,7 +104,7 @@ function genArticles() {
             var title = UTILS.toFirstLetterUpperCase(info.slice(1).join(' ').slice(0, -5));
     
             var imageName = article.path.slice(0, -5);
-            image = images.filter(i => i.includes(imageName));
+            var image = images.filter(i => i.includes(imageName));
             if (image.length) {
                 articles += `
                     <div class="article">
