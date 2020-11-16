@@ -20,7 +20,10 @@ function shareOverrideOGMeta(overrideImage) {
 				'og:image': overrideImage
 			}
 		})
-	})
+	},
+	function (response) {
+	// Action after response
+	});
 }
 
 $.ajax({
