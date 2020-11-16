@@ -26,7 +26,7 @@ $.ajax({
         }
         var image = images.filter(i => i.includes(article.slice(0, -5)));
         if (image.length) {
-            $('meta[property=og\\:image]').attr('content', `${CONSTANT.IMAGES_PATH}/${image[0]}`);
+            $('meta[property=og\\:image]').attr('content', `https://${CONSTANT.REPO}/${CONSTANT.IMAGES_PATH}/${image[0]}`);
         }
     }
 });
