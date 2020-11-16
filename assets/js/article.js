@@ -22,7 +22,7 @@ function shareOverrideOGMeta(overrideImage) {
 		})
 	},
 	function (response) {
-	// Action after response
+        console.log(response)
 	});
 }
 
