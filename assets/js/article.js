@@ -11,6 +11,18 @@ $('#article-content').load(`${CONSTANT.ARTICLES_PATH}/${article}`, (_, status) =
     }
 });
 
+function shareOverrideOGMeta(overrideImage) {
+	FB.ui({
+		method: 'share_open_graph',
+		action_type: 'og.likes',
+		action_properties: JSON.stringify({
+			object: {
+				'og:image': overrideImage
+			}
+		})
+	})
+}
+
 $.ajax({
     type: "GET",
     headers: {
@@ -26,7 +38,7 @@ $.ajax({
         }
         var image = images.filter(i => i.includes(article.slice(0, -5)));
         if (image.length) {
-            $('meta[property=og\\:image]').attr('content', `https://${CONSTANT.REPO}/${CONSTANT.IMAGES_PATH}/${image[0]}`);
+            shareOverrideOGMeta(`https://${CONSTANT.REPO}/${CONSTANT.IMAGES_PATH}/${image[0]}`);
         }
     }
 });
